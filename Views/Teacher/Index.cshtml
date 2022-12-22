@@ -1,0 +1,35 @@
+﻿@model IEnumerable<YaraTechAssessment.Models.Teacher>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>All Teachers</h4>
+<hr />
+
+<button class="btn btn-info">New Teacher</button>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeacherName)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TeacherName)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
